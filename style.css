@@ -211,3 +211,78 @@ footer {
 ::-webkit-scrollbar-thumb {
     background: var(--neon-purple);
 }
+/* =========================================
+   MOBILE RESPONSIVE FIX
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* 1. Algemene layout naar één kolom */
+    .home-hero, 
+    .about-container, 
+    .skills-container, 
+    .contact-container,
+    .project-card {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center;
+        gap: 30px;
+    }
+
+    /* 2. Header menu aanpassen */
+    header {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    /* 3. Tekst groottes optimaliseren voor mobiel */
+    h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.1;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem !important;
+    }
+
+    /* 4. Foto's centreren en schalen */
+    .hero-image, .neon-image-wrapper {
+        width: 280px !important;
+        height: 280px !important;
+        margin: 0 auto;
+    }
+
+    .music-photos, .skills-visuals, .social-big-grid {
+        grid-template-columns: 1fr !important; /* Alles onder elkaar */
+        width: 100%;
+    }
+
+    .music-photos img, .skills-visuals img, .project-image img {
+        height: 250px !important;
+    }
+
+    /* 5. Specifieke fixes voor tekstblokken */
+    .hero-tagline, .music-story {
+        border-left: none !important;
+        border-bottom: 2px solid var(--neon-purple);
+        padding-left: 0 !important;
+        padding-bottom: 20px;
+    }
+
+    .info-list {
+        text-align: left;
+        display: inline-block;
+    }
+}
